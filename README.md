@@ -1,16 +1,21 @@
 ![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
 
-# Assignment Name (Ruby String Lab)
+# Ruby Class Methods
 
 ## Objectives
 
-## Class variables and methods
+By the end of this, students should be able to:
+
+- Write and use class methods
+
+
+## Class methods and instance variables on a class
 
 Sometimes a method or a variable is associated with a class, not an object.
 
 For example, we may want to generate id's for each Person object we create. So,
 we'll create an attribute that is shared by all Person instances. This is called
-a **class variable.**
+a **class instance variable.**
 
 ```ruby
 class Person
@@ -27,11 +32,11 @@ create a **class method**.
 class Person
   # class variable that will keep a running count
   # of all the people created.
-  @person_counter = 0
+  @@person_counter = 0
 
   # use the person counter to generate an unique ID for
   # each person.
-  def self.getID
+  def self.getID #Class method
     @person_counter += 1
   end
 
@@ -49,6 +54,7 @@ class Person
   end
 
 ```
+
 
 
 ## Additional Resources
