@@ -15,53 +15,33 @@ By the end of this, students should be able to:
 
 Sometimes a method or a variable is associated with a class, not an object.
 
-For example, we may want to generate id's for each Person object we create. So,
-we'll create an attribute that is shared by all Person instances. This is called
-a **class instance variable.**
+For example, we may want to count cats for each Cat object we create.
 
 ```ruby
-class Person
-  # class variable that will keep a running count
-  # of all the people created.
-  @person_counter = 0
-...
-```
 
-And if we want to create a method that is shared by all Person instances we can
-create a **class method**.
+class Cat
+  @cat_number = 0
 
-```ruby
-class Person
-  # class variable that will keep a running count
-  # of all the people created.
-  @@person_counter = 0
-
-  # use the person counter to generate an unique ID for
-  # each person.
-  def self.getID #Class method
-    @person_counter += 1
+  def intiailize
+    @cat_number = self.class.add_cat
   end
 
-  # Same as above, you know why right?
-  # def Person.getID
-  #  @person_counter += 1
-  # end
-
-  attr_reader :first_name, :status, :id
-
-  def initialize(fname, lname)
-	...
-	# set this person's ID using the class method
-   @id = Person.getID
+  def self.add_cat
+    @cat_number += 1
   end
+
+  def cat_number
+    @cat_number
+  end
+end
 
 ```
 
+Look at the code above. We've used instance variables inside instance methods. What do instance variables inside classes do? This could uses a counter variable on the **instance of the class**, so each time a new cat is created, we get closer to becoming crazy cat people.
 
 
 ## Additional Resources
 
-List additional related resources such as videos, blog posts and official documentation.
 
 - Item 1
 - Item 2
