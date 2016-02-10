@@ -6,8 +6,10 @@
 
 By the end of this, students should be able to:
 
-- Write and use class methods
-
+-   Give an example of a class method you already use.
+-   Diagram the invocation pattern between `#initialize` and `.new`.
+-   Contrast defining class methods with defining instance methods.
+-   Contrast invoking class methods with invoking instance methods.
 
 ## Class methods and instance variables on a class
 
