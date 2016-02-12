@@ -27,8 +27,14 @@ class FullCat
     puts 'I escaped the cat'
   end
 end
-
 ```
+
+## Lab: Making Class Methods
+
+- Make a class for an animal aside from a cat
+- Create at least two instance methods
+- Create at least two class methods
+- Bonus: Have an instance method call a class method
 
 ## [License](LICENSE)
 
