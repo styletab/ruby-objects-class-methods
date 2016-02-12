@@ -11,7 +11,7 @@ By the end of this, students should be able to:
 -   Contrast defining class methods with defining instance methods.
 -   Contrast invoking class methods with invoking instance methods.
 
-## Class methods
+## Class Methods
 
 Sometimes a method is associated with a class, not an object.
 
