@@ -29,12 +29,19 @@ class FullCat
 end
 ```
 
-## Lab: Making Class Methods
+## Demonstration
 
-- Make a class for an animal aside from a cat.
-- Create at least two instance methods.
-- Create at least two class methods.
-- Bonus: Have an instance method call a class method.
+Observe how a Method on a **Class** differs from a method on an **Instance**
+that Class.
+
+`lib/cat_counter.rb`
+
+## Lab: Making a Class Method
+
+-   Make a class method on Album to search the collection of albums by `title`.
+-   Use this class method to set YOUR favorite Album by searching for the album
+title.
+-   Create a instance method on songs to add a `Rating` to Songs.
 
 ## [License](LICENSE)
 
