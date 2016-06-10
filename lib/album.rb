@@ -38,3 +38,5 @@ end
 #
 # nevermind = Album.new(artist: 'Nirvana', title: 'Nevermind')
 # nevermind.tracks << Song.new(title: 'Smells Like Teen Spirit')
+
+# brians_favorite = Album.find_by_title('1989')
