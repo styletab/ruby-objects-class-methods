@@ -1,19 +1,25 @@
 # Dumb linter wants a comment
-class Class
-  # The * args indicates that the parameters should come in as an array
-  def custom_attr_accessor(*args)
-    # We simply iterate through each passed in argument...
-    args.each do |arg|
-      # Here's the getter
-      self.class_eval("def #{arg};@#{arg};end")
-
-      # Here's the setter
-      self.class_eval("def #{arg}=(val);@#{arg}=val;end")
+class Bar
+  # we have to define this method on `self` (see below comment)
+  def self.attribute_reader(attribute)
+    define_method attribute do
+      self.instance_variable_get("@#{attribute}")
     end
   end
-end
 
-# Dumb linter wants a comment
-class Person
-  custom_attr_accessor :name, :age
+  def self.attribute_writer(attribute)
+    define_method "#{attribute}=".to_sym do |value|
+      self.instance_variable_set("@#{attribute}", value)
+    end
+  end
+
+  def self.attribute_accessor(attribute)
+    attribute_reader attribute
+    attribute_writer attribute
+  end
+
+  # these methods are executed within the definition of the Bar class
+  attribute_reader :foo
+  attribute_writer :bar
+  attribute_accessor :baz
 end
