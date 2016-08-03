@@ -15,6 +15,9 @@ By the end of this, students should be able to:
 
 Sometimes a method is associated with a class, not an object.
 
+Observe how a Method on a **Class** differs from a method on an **Instance**
+that Class.
+
 Let's discuss the code below:
 
 ```ruby
@@ -31,10 +34,7 @@ end
 
 ## Demonstration
 
-Observe how a Method on a **Class** differs from a method on an **Instance**
-that Class.
-
-`lib/cat_counter.rb`
+Let's take a look at the code in `lib/custom_attr.rb`
 
 ## Lab: Making a Class Method
 
