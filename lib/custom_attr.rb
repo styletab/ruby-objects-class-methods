@@ -19,6 +19,7 @@ class Bar
   end
 
   # these methods are executed within the definition of the Bar class
+  # these are class methods 
   attribute_reader :foo
   attribute_writer :bar
   attribute_accessor :baz

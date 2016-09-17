@@ -1,5 +1,6 @@
 # Cat class
 class Cat
+  # @@ is a class variable but should be avoided
   @@cats_count = 0
 
   def initialize(name)
